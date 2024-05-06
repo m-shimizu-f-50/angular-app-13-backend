@@ -27,6 +27,11 @@ $app->withFacades();
 
 $app->withEloquent();
 
+// すべてのリクエストを許可するよう設定
+$app->middleware([
+    App\Http\Middleware\CorsMiddleware::class
+]);
+
 /*
 |--------------------------------------------------------------------------
 | Register Container Bindings
